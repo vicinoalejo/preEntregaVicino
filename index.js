@@ -39,3 +39,21 @@ switch (seleccion){
     default:
         break;
 }
+
+// CLIENTES
+
+class Cliente{
+    constructor(nombre, numCliente, numTelefono, empresa){
+        this.nombre = nombre;
+        this.numCliente = numCliente;
+        this.numTelefono = numTelefono;
+        this.empresa = empresa;
+    }
+}
+
+const cliente1 = new Cliente("Guillermo Mercado", "1", "1558471256","Mercado3d");
+const cliente2 = new Cliente("Fernando Perez", "2", "1569585472","Perez3d");
+const cliente3 = new Cliente("Ivan Lopez", "3", "1532759426","Lopez3d");
+console.log(cliente1);
+console.log(cliente2);
+console.log(cliente3);
