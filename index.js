@@ -57,3 +57,46 @@ const cliente3 = new Cliente("Ivan Lopez", "3", "1532759426","Lopez3d");
 console.log(cliente1);
 console.log(cliente2);
 console.log(cliente3);
+
+let seccion = document.getElementById("principal");
+console.log(seccion.innerHTML);
+
+let titulo = document.getElementById("titulo");
+console.log(titulo.innerText);
+
+let campoCLiente = document.getElementById("cliente");
+let campoProducto = document.getElementById("producto");
+campoCLiente.value = "Jose Perez";
+campoProducto.value = "Soporte Celular";
+
+let principal = document.getElementById("principal");
+let boton = document.getElementById("mode");
+let modo = localStorage.getItem("modo");
+
+//BOTON DARK/LIGHT
+if(modo != null){
+    if(modo == "dark"){
+        document.body.className = modo;
+        principal.className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center "+modo;
+        boton.innerText="Light Mode";
+    }
+}else{
+    modo = "light";
+}
+
+boton.onclick = () => {
+    if(modo == "light"){
+        document.body.className="dark";
+        principal.classList.remove("light");
+        principal.classList.add("dark");
+        boton.innerText="Light Mode";
+        modo = "dark";
+    }else{
+        document.body.className="light";
+        principal.classList.remove("dark");
+        principal.classList.add("light");
+        boton.innerText="Dark Mode";
+        modo = "light";
+    }
+    localStorage.setItem("modo",modo);
+}

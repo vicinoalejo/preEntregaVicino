@@ -1,0 +1,25 @@
+*{
+    margin: 5px;
+    padding: 5px;
+}
+
+html{
+    font-size: 30px;
+}
+
+.titulo{
+    text-align: center;
+    border: 3px solid;
+    width: 50%;
+    color: aliceblue;
+}
+
+.dark{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.light{
+    background-color: white;
+    color: black;
+}
